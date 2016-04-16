@@ -66,6 +66,18 @@ Namespace My
             End Set
         End Property
         
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\#myPrograms\DownloadSpocosyFilesAndStream\logs\")>  _
+        Public Property ProcessLogPath() As String
+            Get
+                Return CType(Me("ProcessLogPath"),String)
+            End Get
+            Set
+                Me("ProcessLogPath") = value
+            End Set
+        End Property
+        
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
@@ -79,13 +91,73 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\#myPrograms\DownloadSpocosyFilesAndStream\logs\")>  _
-        Public Property ProcessLogPath() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("ftp://waws-prod-db3-025.ftp.azurewebsites.windows.net")>  _
+        Public Property RemoteFtpServer() As String
             Get
-                Return CType(Me("ProcessLogPath"),String)
+                Return CType(Me("RemoteFtpServer"),String)
             End Get
             Set
-                Me("ProcessLogPath") = value
+                Me("RemoteFtpServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("WebAppBookmakerFeed20160413071258\paulowensmith1968")>  _
+        Public Property RemoteServerUser() As String
+            Get
+                Return CType(Me("RemoteServerUser"),String)
+            End Get
+            Set
+                Me("RemoteServerUser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("PS?pos68")>  _
+        Public Property RemoteServerPassword() As String
+            Get
+                Return CType(Me("RemoteServerPassword"),String)
+            End Get
+            Set
+                Me("RemoteServerPassword") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property MaxFilesToDownload() As Integer
+            Get
+                Return CType(Me("MaxFilesToDownload"),Integer)
+            End Get
+            Set
+                Me("MaxFilesToDownload") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("/site/wwwroot/files/")>  _
+        Public Property RemoteFtpPath() As String
+            Get
+                Return CType(Me("RemoteFtpPath"),String)
+            End Get
+            Set
+                Me("RemoteFtpPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\#myFiles\Downloaded\")>  _
+        Public Property LocalDownloadPath() As String
+            Get
+                Return CType(Me("LocalDownloadPath"),String)
+            End Get
+            Set
+                Me("LocalDownloadPath") = value
             End Set
         End Property
     End Class

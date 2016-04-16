@@ -68,7 +68,7 @@
         Return ret
     End Function
     Public Function DeleteFile(ByVal _ftpPath As String) As String
-        Dim ret As String
+        Dim ret As String = ""
         Try
             Dim _request As System.Net.FtpWebRequest = System.Net.WebRequest.Create(_ftpPath)
             _request.KeepAlive = False
